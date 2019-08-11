@@ -1,0 +1,199 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.header
+	display: flex
+	flex-direction: column
+	max-width: 100%
+	background-image: url("../img/bg-header.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+.header__wrapper
+	display: flex
+	width: 1200px	
+	flex-direction: column
+	margin: 0 auto
+
+	
+.navigation
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: 75px
+	background: rgba(0, 0, 0, .5)	
+.navigation__wrapper
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 1200px
+	height: 100%
+	margin: 0 auto	
+	padding: 0 30px
+.nav
+	display: flex
+	align-items: center	
+.nav__btn-toggle
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 2
+	width: 60px
+	height: 60px
+	background-color: red
+	border: none
+	display: none
+.nav__list
+	display: flex
+	align-items: center
+	list-style-type: none
+	margin-bottom: 0
+	padding-left: 0
+.nav__item
+	font-size: 16px
+	text-transform: uppercase
+	margin-right: 35px
+	a
+		color: white
+		font-weight: bold
+		
+.btn
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 40px
+	background: white
+	color: black
+	text-transform: uppercase
+	border-radius: 15px
+	border: none
+	font-weight: bold
+	font-size: 15px
+	padding: 0 30px
+.logo
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	margin: 100px auto 110px
+	height: 260px
+	width: 260px
+	border-radius: 50%
+	border: 2px solid white
+	p
+		color: white
+		align-self: flex-start
+		letter-spacing: 7px
+	img
+		margin-top: auto	
+.header__title
+	font-family: "din-light"
+	font-weight: 300
+	font-size: 55px
+	color: white
+	text-transform: uppercase	
+	text-align: center	
+.header__slogan
+	font-family: "din-light", sans-serif
+	font-weight: 300
+	color: white
+	font-size: 20px
+	text-align: center
+	padding: 20px 26% 0
+	letter-spacing: 1px
+.header__text
+	padding-bottom: 100px	
+/*service*/
+.service__wrapper
+	display: flex
+	flex-direction: column
+	text-align: center
+	margin: 0 auto
+	width: 1200px
+	padding: 60px 0 0
+.service__title
+	font-family: "din-light", sans-serif
+	font-weight: 200
+	font-size: 38px
+	letter-spacing: 3px
+.service__title-small
+	padding: 0 37%
+	font-family: "din-light", sans-serif
+	font-weight: 400
+	font-size: 25px
+	line-height: 1.4
+.kinds
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.kinds__item--metall
+	background: url("../img/metall.jpg"), no-repeat
+.kinds__item--zippo
+	background: url("../img/photo-zippo(1).jpg"), no-repeat	
+.kinds__item--kboard
+	background: url("../img/keyboard.jpg") , no-repeat	
+.kinds__item--case
+	background: url("../img/cases.jpg") , no-repeat
+.kinds__item--shield
+	background: url("../img/shields.jpg") , no-repeat	
+.kinds__item--ring
+	background: url("../img/rings.jpg") , no-repeat	
+.kinds__item--gun
+	background: url("../img/knife.jpg") , no-repeat		
+.kinds__item--pen
+	background: url("../img/pen.jpg") , no-repeat
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/pen.jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&:hover
+		&::after
+			transform: scale(1.2)			
+.kinds__item
+	position: relative
+	display: flex
+	flex-direction: column
+	width: 260px
+	height: 260px
+	margin-bottom: 50px
+	background-position: 50% 50%
+	background-size: cover		
+	color: white
+	transition: all .3s
+	overflow: hidden
+.kinds__wrapper
+	position: absolute
+	z-index: 9	
+@import "media" // Always at the end
