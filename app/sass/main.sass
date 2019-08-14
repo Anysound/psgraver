@@ -14,7 +14,8 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	font-family: "din-regular"
+	src: url("../fonts/Din/DIN2014-Regular.woff")
 	overflow-x: hidden
 	color: $text
 	input, textarea
@@ -24,6 +25,9 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
+a 
+	&:hover
+		text-decoration: none		
 
 .header
 	display: flex
@@ -80,6 +84,9 @@ body
 	a
 		color: white
 		font-weight: bold
+		&:hover
+			transition: all .3s
+			color: rgba(255,255,255,0.5)
 		
 .btn
 	display: flex
@@ -111,12 +118,16 @@ body
 	img
 		margin-top: auto	
 .header__title
-	font-family: "din-light"
+	font-family: "din-light", sans-serif
 	font-weight: 300
 	font-size: 55px
 	color: white
 	text-transform: uppercase	
 	text-align: center	
+.header__title--black
+	color: black
+	text-transform: uppercase
+	font-size: 40px
 .header__slogan
 	font-family: "din-light", sans-serif
 	font-weight: 300
@@ -127,6 +138,9 @@ body
 	letter-spacing: 1px
 .header__text
 	padding-bottom: 100px	
+.social-icons
+	img
+		margin-right: 15px	
 /*service*/
 .service__wrapper
 	display: flex
@@ -134,7 +148,7 @@ body
 	text-align: center
 	margin: 0 auto
 	width: 1200px
-	padding: 60px 0 0
+	padding: 80px 20px 0
 .service__title
 	font-family: "din-light", sans-serif
 	font-weight: 200
@@ -143,6 +157,7 @@ body
 .service__title-small
 	padding: 0 37%
 	font-family: "din-light", sans-serif
+	margin: 20px 0 60px
 	font-weight: 400
 	font-size: 25px
 	line-height: 1.4
@@ -153,18 +168,207 @@ body
 
 .kinds__item--metall
 	background: url("../img/metall.jpg"), no-repeat
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/metall.jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1		
+	&:hover
+		&::after
+			transform: scale(1.1)
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)		
 .kinds__item--zippo
 	background: url("../img/photo-zippo(1).jpg"), no-repeat	
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/photo-zippo(1).jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1		
+	&:hover
+		&::after
+			transform: scale(1.1)
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)		
 .kinds__item--kboard
 	background: url("../img/keyboard.jpg") , no-repeat	
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/keyboard.jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1		
+	&:hover
+		&::after
+			transform: scale(1.1)
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)		
 .kinds__item--case
 	background: url("../img/cases.jpg") , no-repeat
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/cases.jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1		
+	&:hover
+		&::after
+			transform: scale(1.1)	
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)	
 .kinds__item--shield
 	background: url("../img/shields.jpg") , no-repeat	
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/shields.jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1		
+	&:hover
+		&::after
+			transform: scale(1.1)	
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)	
 .kinds__item--ring
 	background: url("../img/rings.jpg") , no-repeat	
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/rings.jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1		
+	&:hover
+		&::after
+			transform: scale(1.1)	
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)	
 .kinds__item--gun
 	background: url("../img/knife.jpg") , no-repeat		
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		right: 0
+		background: url("../img/knife.jpg") , no-repeat
+		background-size: cover
+		background-position: center
+		transition: all .4s
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1		
+	&:hover
+		&::after
+			transform: scale(1.1)	
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)	
 .kinds__item--pen
 	background: url("../img/pen.jpg") , no-repeat
 	&::after
@@ -178,9 +382,24 @@ body
 		background-size: cover
 		background-position: center
 		transition: all .4s
+		filter: alpha(opacity=80) black
+	&::before
+	 	content: ''
+	 	position: absolute
+	 	top: 0
+	 	right: 0
+	 	left: 0
+	 	bottom: 0
+	 	background-color: rgba(0, 0, 0, 0.5)
+	 	transition: all .3s
+	 	z-index: 1	
 	&:hover
 		&::after
-			transform: scale(1.2)			
+			transform: scale(1.1)	
+		&::before
+			transition: all .3s
+			background-color: rgba(0,0,0,0.3)
+				
 .kinds__item
 	position: relative
 	display: flex
@@ -195,5 +414,110 @@ body
 	overflow: hidden
 .kinds__wrapper
 	position: absolute
-	z-index: 9	
+	z-index: 2
+	top: 60px
+	left: 0
+	width: 100%
+	text-align: center
+	
+	h2
+		line-height: 1.2
+		margin-bottom: 20px
+		text-transform: uppercase
+		font-family: din-regular, sans-serif
+.how-to-make
+	padding: 40px 20px 30px		
+/*about*/
+.about
+	background: #f5f5f5
+
+.about__wrapper
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+	width: 1200px
+	margin: 0 auto
+	padding: 30px 20px 40px
+
+.about__text
+	width: 50%	
+	font-family: "din-regular", sans-serif
+.about__img
+	align-self: center	
+/*map*/
+.map
+	position: relative
+	height: 500px
+.map__info
+	position: absolute
+	z-index: 2
+	top: 40px
+	left: 40px
+	width: 480px
+	height: 290px
+	padding: 50px
+	background: white
+	font-family: "din-regular", sans-serif
+	a
+		color: black
+.footer
+	position: relative
+	background-color: #333333
+	padding-bottom: 10px
+.footer__wrapper
+	width: 1200px
+	margin: 0 auto
+	text-align: center
+
+	p
+		color: white
+		margin: 0		
+		padding: 40px 0 20px
+/*order*/
+.order__wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 1200px
+	margin: 0 auto
+	padding: 40px 0
+	.header__title
+		font-size: 36px
+		text-transform: none
+		line-height: 1.4
+.form
+	display: flex
+	flex-direction: column
+.order__preview
+	text-align: center
+	font-size: 24px
+	font-family: "din-light", sans-serif
+	padding: 30px 29% 0
+	a
+		white-space: nowrap
+		color: black
+
+.form
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 800px
+.form__name,
+.form__tel,
+.form__email,
+.form__description
+	width: 800px
+	height: 50px
+	margin-bottom: 20px
+	padding: 12px
+label
+	width: 100px
+	align-self: flex-start	
+.form__description
+	height: 230px	
+
+
+
 @import "media" // Always at the end
