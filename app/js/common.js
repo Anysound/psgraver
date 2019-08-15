@@ -14,3 +14,6 @@ $(function() {
     }
   });
 });
+$(function(){
+  $('.nav:has(nav--opened)').remove('.social-icons')
+})

@@ -68,7 +68,7 @@ a
 	z-index: 2
 	width: 60px
 	height: 60px
-	background-color: red
+	background-color: transparent
 	border: none
 	display: none
 .nav__list
@@ -84,6 +84,7 @@ a
 	a
 		color: white
 		font-weight: bold
+		white-space: nowrap
 		&:hover
 			transition: all .3s
 			color: rgba(255,255,255,0.5)
@@ -517,7 +518,22 @@ label
 	align-self: flex-start	
 .form__description
 	height: 230px	
-
+.nav__item--service
+	position: relative
+	::before
+		content: ""
+		position: absolute
+		top: 10px
+		right: -16px
+		width: 0;
+		height: 0;
+		border: 0 solid transparent;
+		border-left-width: 5px;
+		border-right-width: 5px;
+		border-top: 5px solid white;
+	&:hover
+		transition: all .3s
+		opacity: .5
 
 
 @import "media" // Always at the end
