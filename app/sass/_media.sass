@@ -13,7 +13,8 @@
     .service__wrapper,
     .about__wrapper,
     .footer__wrapper,
-    .order__wrapper
+    .order__wrapper,
+    .price__wrapper
         width: 100%  
     .kinds
         justify-content: space-around      
@@ -103,6 +104,27 @@
     .social-icons
         position: relative
         right: -130px     
+    .nav__item--service
+        position: relative
+        ::before
+            content: ""
+            position: absolute
+            top: 17px
+            right: -8px
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-left-width: 5px;
+            border-right-width: 5px;
+            border-top: 5px solid white;    
+    .price__wrapper
+        padding: 30px 15px 40px    
+    .price__title
+        font-size: 30px
+    .price__sub-title
+        font-size: 25px
+    .price-items__item
+        font-size: 16px    
 // ≥576px
 +media-breakpoint-down(xs)
     .about__img
@@ -141,6 +163,7 @@
         padding: 40px 20px 0     
     .about__text
         width: 100%    
+    
 /*==========  Mobile First  ==========*/
 
 // ≤576px

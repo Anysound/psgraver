@@ -87,7 +87,7 @@ a
 		white-space: nowrap
 		&:hover
 			transition: all .3s
-			color: rgba(255,255,255,0.5)
+			color: rgba(255,255,255,0.7)
 		
 .btn
 	display: flex
@@ -138,10 +138,40 @@ a
 	padding: 20px 26% 0
 	letter-spacing: 1px
 .header__text
-	padding-bottom: 100px	
+	padding-bottom: 100px
 .social-icons
+	margin-left: 420px
 	img
-		margin-right: 15px	
+		margin-right: 10px	
+
+.nav__item--service
+	&:hover
+		.dropdown
+			visibility: visible
+			opacity: 1
+			display: block
+
+
+
+.dropdown
+	opacity: 0
+	min-width: 5rem
+	position: absolute
+	transition: all 0.3s ease
+	margin-top: 1rem
+	left: 0px
+	display: block
+	padding-left: 0
+	li
+		list-style-type: none
+		a
+			&::before
+				display: none
+		&::before
+			display: none
+	&::before
+		display: none
+		
 /*service*/
 .service__wrapper
 	display: flex
@@ -534,6 +564,34 @@ label
 	&:hover
 		transition: all .3s
 		opacity: .5
-
-
+.price__title,
+.price__sub-title
+	font-family: "din-regular", sans-serif
+	font-size: 35px
+	text-align: center
+	text-transform: uppercase
+.price__sub-title
+	font-size: 30px
+	text-transform: inherit
+.price-items__item
+	position: relative
+	display: flex
+	justify-content: space-between
+	font-size: 23px
+	font-family: "din-regular", sans-serif
+	&::before
+		content: ""
+		position: absolute
+		bottom: 2px
+		left: 0
+		height: 1px
+		width: 100%
+		background-color: #e6e6e6
+	&:last-child
+		&::before
+			display: none
+.price__wrapper
+	width: 1200px
+	margin: 0 auto
+	padding: 30px 0 70px
 @import "media" // Always at the end
